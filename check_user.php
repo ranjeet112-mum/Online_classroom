@@ -30,7 +30,7 @@
         {
             echo "Wrong credentials";
             clearstatcache();
-            header("location:index.php");
+            header("Refresh:3; url=index.php", true ,30);
         }
 //echo "test";
 ?>

@@ -1,48 +1,21 @@
 body {
-    background-color: #36393f;
-    color:aliceblue;
-/*    background: linear-gradient(to left,#5c85d6,#99b3e6);*/
-}
-
-.top_bar {
-    height: 100px;
-    width: 100%;
     background-color: #4f545c;
-    border-radius: 5px;z-index: -1;
-}
-.top_bar img {
-    margin-left: 60%;
-    margin-top: -30px;
-    border-radius: 10px;
     
 }
-.top_bar button {
-/*   align-items: center;*/
-    border-radius: 3px;
-    box-shadow: 2px 2px 5px #999999; 
+.top_box {
+    width: 100%;
+    height: 140px;
+    border-radius: 28px;
     border: none;
-    font-size: 20px;
-    opacity: 0.5222222222222222222222;
-    margin-top: -35px;
-    margin-left: 5%;
-    
-    
+    background-color: #36393f;
 }
-
-.aa {
-    
-    text-decoration: none;
-    text-decoration-color: white;
-    
-}
-
-
-
 .row {
-    width: 100%;position: fixed;
-    top:60px;
-    height: 100px;
+    width: 100%;
+/*    position: fixed;*/
+/*    top:60px;*/
+    height: 140px;
     display: flex;
+    
 }
 
 .col-1{width: 8.33%;}
@@ -62,62 +35,302 @@ body {
 [class*="col-"]{
     border: none;
 /*    border: 1px solid red;*/
-    padding: 5px;
+/*    padding: 5px;*/
     
 }
-
-.tbl {
-    color: white;
+.col-2 img {
+    margin-top: 55px;
+    margin-left: 60%;
+    border-radius: 10px;
+}
+.col-6 p {
     font-family: 'Source Sans Pro', sans-serif,cursive;
+    font-size: 25px;
+    color: white;
+    margin-top: 65px;
+}
+.col-4 button , input {
+    font-size: 15px;
+    border-radius: 4px;
+/*    opacity: 0.4;*/
+    margin-top: 55px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border:1px solid white;
+/*    margin-left: 20%;*/
 }
 
-.big_box {
-    width : 300px;
-    height: 300px;
-    background-color: #36393f;
-    border: none;
-    margin-top: 150px;
-    margin-left: 40px;           
-    border-radius: 10px;
-    box-shadow: 0 0 5px white;
-/*    padding: 2px;*/
-
+hr {
+    border-top: 1px solid grey;
+    color: blueviolet;
+    border-bottom: 1px solid #36393f;
+    border-right: 1px solid #36393f;
+    border-left: 1px solid #36393f;
+    border-left: 1px solid #36393f;
+}
+.intro_box {
+    width: 16.66%;
+    height: 75px;
+    border-radius: 14px;
+    border: 2px solid  grey;
+    display:block;
     
 }
-.bg_box {
-    width: 300px;
-    height: 100px;
-/*    background-image: url(bg_box_img.jpg);*/
-    background-color: #4287f5;
-    border-radius: 10px;
-    border-bottom: 1px solid #4f545c;
-    box-shadow: 0 0 3px #4f545c;
-
-
-    
+.intro_box p {
+    font-family: cursive;
+    font-size: 15px;
+    color:white;
 }
-.notification {
-    width: 300;
+
+.intro_box button {
+    margin-left: 180px;
+    border:none;
+    border-radius: 3px;
+}
+
+.class_info {
+    min-width:  300px;
+    max-width: 300px;
     height: 200px;
-    background-color: white;
-    border-radius: 10px;
-    z-index: -1;
+    box-shadow: 0 0 8px white;
+    border: 1px solid white;
+    border-radius: 14px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    background: white;
+    
 }
-.cmt_box {
-/*    margin-top: 155px;*/
-    position: static;
-    margin-top: -35px;
-    left: 5px;
+/*
+.class_info > p {
+    font-family: 'Source Sans Pro', sans-serif,cursive;
+    font-size: 15px;
+    margin-top: 122px;
+}
+*/
+.class_color1  {
+    width: 300px;
+    height: 120px;
+    background-color: coral;
+    border-radius: 14px;
+    position: absolute;
+    top: inherit;
+    margin-bottom: 100px;
+}
+.class_color2  {
+    width: 300px;
+    height: 120px;
+    background-color: aquamarine;
+    border-radius: 14px;
+    position: absolute;
+    top: inherit;
+    margin-bottom: 100px;
+}
+.class_color3  {
+    width: 300px;
+    height: 120px;
+    background-color: darkseagreen;
+    border-radius: 14px;
+    position: absolute;
+    top: inherit;
+    margin-bottom: 100px;
+}
+.class_color4  {
+    width: 300px;
+    height: 120px;
+    background-color: magenta;
+    border-radius: 14px;
+    position: absolute;
+    top: inherit;
+    margin-bottom: 100px;
+}
+
+.class_color1 p {
+    font-family: 'Source Sans Pro', sans-serif,cursive;
+    font-size: 25px;
     text-align: center;
-/*      z-index: -1;*/
+}
+
+.class_color2 p {
+    font-family: 'Source Sans Pro', sans-serif,cursive;
+    font-size: 25px;
+    text-align: center;
+}
+.class_color3 p {
+    font-family: 'Source Sans Pro', sans-serif,cursive;
+    font-size: 25px;
+    text-align: center;
+}
+.class_color4 p {
+    font-family: 'Source Sans Pro', sans-serif,cursive;
+    font-size: 25px;
+    text-align: center;
+}
+
+.notification_table {
+     border: 3px solid grey;
+    box-shadow: 0 0 5px black;
+    width:65%;
+    height:210px;
+    border-radius: 28px;
+    margin-left: 17%;
+    margin-top: 25px;
+/*    padding: 18px;*/
+    
+    
 }
 
 
 
 
+/*
+.row p {
+    font-family: 'Source Sans Pro', sans-serif,cursive;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    
+}
+
+H2 {
+    color : white;
+
+}
+*/
+
+
+
+
+
+/*
+<?php
+include('connect.php');
+session_start();
+
+    echo "<div class='row'>"; 
+    echo "<div class='col-10'>";
+    echo "</div>";
+        
+        echo "<div class='intro_box'>";
+            echo "<p>Hello ,".$_SESSION['username'];
+            echo "</p>";
+            echo "<a href='logout.php'><button>Logout</button></a>";
+        echo "</div>";
+    echo "</div>";
+        
+
+        
+ $sqlq= "SELECT * from  {$_SESSION['username']}_joined" ;
+$sqldata = mysqli_query($dbcon,$sqlq) or die(mysqli_error($dbcon));        
+
+while($row=mysqli_fetch_array($sqldata,MYSQLI_ASSOC))
+{        
+    echo "<div class='class_info'>";
+    echo "<a href='#'><div class='class_color'>"; 
+            
+            echo "<p>IIS-sem 5</p>";
+            echo "<p>-Poornima</p>";
+            echo "</div></a>";
+        echo "<p>latest notification in the class</p>";
+        
+    echo "</div>";    
+}
+?>   */
 
 
 
 
 
 
+
+/*
+--------------------------------------------------
+<!--
+<!--
+<!--
+<!--
+<?php
+include('connect.php');
+session_start();
+
+    echo "<div class='row'>"; 
+    echo "<div class='col-10'>";
+    echo "</div>";
+            echo "<p>Hello ,".$_SESSION['username'];
+            echo "</p>";
+            echo "<a href='logout.php'><button>Logout</button></a>";
+        echo "</div>";
+    echo "</div>";
+        
+        
+?>    
+-->
+-->
+-->
+-->
+<!--
+<div class="row">
+    <div class="class_info">
+        <div class="class_color"> 
+            
+            <p>IIS-sem 5</p>
+            <p>-Poornima</p>
+        </div>
+        <p>latest notification in the class</p>
+        
+    </div>
+        
+        
+        <div class="class_info">
+        <div class="class_color"> 
+            
+            <p>IIS-sem 5</p>
+            <p>-Poornima</p>
+        </div>
+        <p>latest notification in the class</p>
+        
+    </div>
+        <div class="class_info">
+        <div class="class_color"> 
+            
+            <p>IIS-sem 5</p>
+            <p>-Poornima</p>
+        </div>
+        <p>latest notification in the class</p>
+        
+    </div>
+        <div class="class_info">
+        <div class="class_color"> 
+            
+            <p>IIS-sem 5</p>
+            <p>-Poornima</p>
+        </div>
+        <p>latest notification in the class</p>
+        
+    </div>
+    <div class="class_info">
+        <div class="class_color"> 
+            
+            <p>IIS-sem 5</p>
+            <p>-Poornima</p>
+        </div>
+        <p>latest notification in the class</p>
+        
+    </div>
+    <div class="class_info">
+        <div class="class_color"> 
+            
+            <p>IIS-sem 5</p>
+            <p>-Poornima</p>
+        </div>
+        <p>latest notification in the class</p>
+        
+    </div>
+
+        
+</div>        
+-->
+        
+*/
+        
+/*        echo "<div class='intro_box'>";*/

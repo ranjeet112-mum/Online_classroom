@@ -15,6 +15,7 @@
     if(mysqli_num_rows(mysqli_query($dbcon,$sqlq)) > 0)
     {
         echo "username already exist!!";
+        header("Refresh:3; url=register.php", true ,30);
     }
     else{
         $sqlq="INSERT INTO `registration` (`username`, `gmail`, `password`, `phone_no`) VALUES ('$username', '$gmail', '$password', '$phone_no')";
@@ -22,7 +23,9 @@
         {
             
             $sql1="CREATE TABLE `classroom`.`{$username}_created` ( `classcode` VARCHAR(20) NOT NULL , `classname` VARCHAR(20) NOT NULL ) ENGINE = InnoDB;";
-            $sql2="CREATE TABLE `classroom`.`{$username}_joined` ( `classcode` VARCHAR(20) NOT NULL ) ENGINE = InnoDB;";
+            $sql2="CREATE TABLE `classroom`.`{$username}_joined` ( `classcode` VARCHAR(20) NOT NULL,
+            `classname` VARCHAR(20) NOT NULL,
+            `creater` VARCHAR(20) NOT NULL) ENGINE = InnoDB;";
             mysqli_query($dbcon,$sql1);
                 
             mysqli_query($dbcon,$sql2);
