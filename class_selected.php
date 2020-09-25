@@ -24,12 +24,20 @@
     </div>
         <hr>
         
+
+<form method="get" action="notice_in_the_class.php?class-selected=<?php echo $_GET['class-selected']?>&">
+    
+    <input type="text" name="comment_in_the_box" class="comment_box" placeholder="Enter the comment in the class">
+</form>        
+        
+        
+        
+        
+        
 <?php 
     
             include('connect.php');
             session_start();
-    
-            
 $sqlq = "SELECT * from `{$_GET['class-selected']}_notification` ";
 $sqlq2 = "SELECT * from `list_of_class` WHERE creater= '".$_GET['class-selected']."' ";
 $mysqli_result = mysqli_query($dbcon,$sqlq); //or  die(mysqli_error($dbcon));
@@ -58,6 +66,7 @@ echo "</p></i></b><b><i><p style='font-size:15px; margin-left:25px; color:white'
     if($row['username'] == $_GET['creater'])
     echo "</a>";
 }
+        $_SESSION['class11']=$_GET['class-selected'];
         ?>
     </body>
 </html>

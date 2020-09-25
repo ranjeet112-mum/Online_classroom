@@ -121,7 +121,7 @@ if($count == 4)
 
 
     echo "<div class='class_info'>";
-    echo "<a href='#'>";
+    echo "<a href='class_selected_creatersview.php'>";
     
     if(rand()%4==0)
     echo "<div class='class_color1'>";
@@ -150,6 +150,8 @@ else{
     echo "<p>No class Created!!</p>";
 }
         echo"</div>";
+        unset($_SESSION['class11']);
+        
 ?> 
 
         
