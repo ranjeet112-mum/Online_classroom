@@ -43,16 +43,23 @@ session_start();
     echo "</div>";
         
 echo "<H2>Class Enrolled:</<H2><br><br><br>";
-        
-$sqlq= "SELECT * from  {$_SESSION['username']}_joined";
-$sqldata = mysqli_query($dbcon,$sqlq);// or die(mysqli_error($dbcon));        
+ $user=$_SESSION['username'];       
+$sqlq= "SELECT * from  student_class_rec WHERE username='$user'";
+$sqldata = mysqli_query($dbcon,$sqlq);// or die(mysqli_error($dbcon));{$_SESSION['username']}_joined        
 $count=0;
+//        echo $sqldata;
 echo"<div class='row'>";
 if(mysqli_num_rows($sqldata)>0)
-{        
+{    
+    
 while($row=mysqli_fetch_array($sqldata,MYSQLI_ASSOC))
 {
-if($row['classcode']!= "" && $row['creater'] != $_SESSION['username'])
+    $cc=$row['classcode'];
+    $sqlq2 = "SELECT * from  list_of_class WHERE code='$cc'";
+    $sqldata2= mysqli_query($dbcon,$sqlq2);
+    $row2=mysqli_fetch_array($sqldata2,MYSQLI_ASSOC);
+    
+if($row['classcode']!= "" && $row2['creater'] != $_SESSION['username'])
 {
 if($count == 4)
 {
@@ -60,16 +67,15 @@ if($count == 4)
     echo "</div>";
     echo "<div class='row'>";
 }
-
-
     echo "<div class='class_info'>";
-    
+//    
     $code=$row['classcode'];
-    $cname=$row['classname'];
-    $creator=$row['creater'];
-    $aqur="class_selected.php?class-selected=$code&cname=$cname&creater=$creator>";
-    
-    echo "<a href=".$aqur ;
+    $cname=$row2['cname'];
+    $creator=$row2['creater'];
+//    echo $creator;
+$aqur="class_selected.php?class-selected=$code&creater=$creator&cname=$cname>";
+//    
+    echo "<a style='text-decoraton:none; color:black;' href=".$aqur ;
     if(rand()%4==0)
     echo "<div class='class_color1'>";
     else if(rand()%4==1)
@@ -80,18 +86,18 @@ if($count == 4)
     echo "<div class='class_color4'>";     
             
             echo "<p>";
-            echo $row['classname'];
+            echo $cname;
             echo "</p>";
             echo "<p>- ";
-                echo $row['creater'];echo "</p>";
+                echo $row2['creater'];echo "</p>";
             echo "</div></a>";
-//        echo "<p>latest notification in the class.This is to test if the colored box goes down or not</p>";
+////        echo "<p>latest notification in the class.This is to test if the colored box goes down or not</p>";
         
     echo "</div>";  
 $count = $count +1;
 }
 }
-    
+//    
 }
 else{
     echo "<p>No class Enrolled!!</p>";
@@ -103,7 +109,7 @@ echo "<br>";echo "<br>";echo "<br>";echo "<br>";
                 echo "<hr>";        
 echo "<H2>Class Created:</<H2><br><br><br>";
         
-$sqlq= "SELECT * from  {$_SESSION['username']}_created";
+$sqlq= "SELECT * from list_of_class WHERE creater = '$user'";
 $sqldata = mysqli_query($dbcon,$sqlq) or die(mysqli_error($dbcon));        
 $count=0;
 echo"<div class='row'>";
@@ -118,10 +124,18 @@ if($count == 4)
     echo "</div>";
     echo "<div class='row'>";
 }
+    
+    $code=$row['code'];
+    $cname=$row['cname'];
+    $creator=$user;
+//    echo $creator;
+$aqur="class_selected_creatersview.php?class-selected=$code&creater=$creator&cname=$cname>";
+    
 
-
+    
     echo "<div class='class_info'>";
-    echo "<a href='class_selected_creatersview.php'>";
+    echo "<a style='text-decoraton:none; color:black;' href=".$aqur; 
+//        'class_selected_creatersview.php'>";
     
     if(rand()%4==0)
     echo "<div class='class_color1'>";
@@ -134,10 +148,10 @@ if($count == 4)
         
             
             echo "<p>";
-            echo $row['classname'];
+            echo $cname;
             echo "</p>";
             echo "<p>Class code:  ";
-            echo $row['classcode'];
+            echo $code;
             echo "</p>";
             echo "</div></a>";
 //        echo "<p>latest notification in the class.This is to test if the colored box goes down or not</p>";
@@ -151,6 +165,8 @@ else{
 }
         echo"</div>";
         unset($_SESSION['class11']);
+        unset($_SESSION['cname']);
+        unset($_SESSION['creater']);
         
 ?> 
 

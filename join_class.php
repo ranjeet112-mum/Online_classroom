@@ -7,7 +7,7 @@ $username = $_SESSION['username'];
 
 $sqlq = "SELECT * from list_of_class WHERE code='$code'";
 
-$sqlq2 = "SELECT * from {$username}_joined WHERE classcode='$code'";
+$sqlq2 = "SELECT * from student_class_rec WHERE classcode='$code' AND username='$username'";
 
 //$row = mysqli_fetch_array($mysqli_result);
 
@@ -20,21 +20,29 @@ $row = mysqli_fetch_array($mysqli_result, MYSQLI_ASSOC);
   if (!$mysqli_result ) {
         echo  mysqli_error($dbcon);
     }
-if(mysqli_num_rows(mysqli_query($dbcon,$sqlq))>0 && mysqli_num_rows(mysqli_query($dbcon,$sqlq2))==0)
+if(mysqli_num_rows(mysqli_query($dbcon,$sqlq))>0 && mysqli_num_rows(mysqli_query($dbcon,$sqlq2))==0 && $row['creater'] != $username )
 {
-    $sqla = "INSERT into `{$username}_joined` (`classcode`,`classname`,`creater`) VALUES ('".$code."' , '".$row['cname']."' ,'".$row['creater']."' )";
+//    if()
+    {
+        
+    $sqla = "INSERT into `student_class_rec` (`username`,`classcode`) VALUES ('".$username."' , '".$code."' )";
     mysqli_query($dbcon,$sqla);
+        echo "Class successfully Enrolled";
+    }
     
+  header("location:college.php");
     
-    $sqla = "INSERT into `{$code}_stud_details` (`username`) VALUES ('$username' )";
-    mysqli_query($dbcon,$sqla);
-    
-echo "Class successfully Enrolled";
+
 
 }
 else if(mysqli_num_rows(mysqli_query($dbcon,$sqlq2))>0)
 {
     echo"<p>Already enrolled</p>";
+
+}
+else if($row['creater'] == $username)
+{
+    echo"<p>You created the class!!  YOU CAN'T JOIN!!</p>";
 
 }
 else{

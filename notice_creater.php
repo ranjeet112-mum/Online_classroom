@@ -2,7 +2,7 @@
 <html>
     <head>
             <title><?php include('connect.php');
-        session_start(); echo $_SESSION['cname']?></title>
+        session_start();echo $_SESSION['cname']?></title>
         <link rel="shortcut icon" href="discord.png">
         <link rel="stylesheet" href="_main_college.css?v=<?php echo time(); ?>">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -21,9 +21,11 @@
         
     </div>
         <hr>
-    <div class="row" style="height:auto;">
+        
+<!-- ---------------------------------------------------------------------------------------------       -->
+ <div class="row" style="height:auto;">
             <div class="col-8">
-        <p style="color:white; font-size:16px; text-align:center;">Submit your files here and also you'll find the file sent by your teacher here itself!!</p> 
+        <p style="color:white; font-size:16px; text-align:center;">All the submissions by the attendees will be seen here</p> 
 
 
                 <p style="color:white; font-size:20px"><b>Task/Notice :</b></p>
@@ -63,30 +65,11 @@ include('connect.php');
         <hr>
 
         
-<!--        TO DISPLAY ALL THE ATTACHMENTS GIVEN BY THE TEACHER!!-->
+<!--        TO DISPLAY ALL THE DONE BY STUDENTS!!-->
+        <p style="color:white; text-align:center; font-size:20px">Files attached:</p>
         
-        <p style="color:white; text-align:center; font-size:20px">Teachers attachments:</p>       
 <?php        
-        $creater= $_SESSION['creater'];
-        $noti= $_SESSION['notice_num'];
-        $class= $_SESSION['class11'];
-        
-        $stat ="SELECT * from `files` WHERE username='$creater' AND notice_num='$noti' AND class = '$class'";
-        $mydata=mysqli_query($dbcon,$stat);
-        echo "<ol>";
-        while($row = mysqli_fetch_assoc($mydata)) {
-           echo"<li style='color:white;  font-size:20px;  text-decoration: none;'>
-            <a href='view.php?id=".$row['id']."'>".$row['name']."</a></li>";
-            
-        }
-        echo "</ol>";
-        
-?>        
-     <hr>
-    <p style="color:white; text-align:center; font-size:20px">My Submissions:</p>
-        
-  <?php        
-        $creater= $_SESSION['username'];
+         $creater= $_SESSION['creater'];
         $noti= $_SESSION['notice_num'];
         $class= $_SESSION['class11'];
         
@@ -101,11 +84,28 @@ include('connect.php');
         }
         echo "</ol>";
         
-?>      
+?>   
+    <hr>
+        <p style="color:white; text-align:center; font-size:20px">All Submissions:</p>
+<?php        
+         $creater= $_SESSION['creater'];
+        $noti= $_SESSION['notice_num'];
+        $class= $_SESSION['class11'];
         
+        $stat = "SELECT * from `files` WHERE username<>'$creater' AND notice_num='$noti' AND class = '$class'";
+        $mysqli_res=mysqli_query($dbcon,$stat);
         
+        echo "<ol>";
+        $q="&nbsp;&nbsp;&nbsp;&nbsp;";
+        while($row = mysqli_fetch_assoc($mysqli_res)) {
+            echo"<li style='color:white;  font-size:20px;  text-decoration-color: none;'> 
+            <a href='view.php?id=".$row['id']."'><div class='b'>".$row['name']."</div></a> ".$q."".$q."".$q."".$q."  by -".$row['username']."</li><br>";
+            
+            
+        }
+        echo "</ol>";
         
-        
+?>        
         
         
         

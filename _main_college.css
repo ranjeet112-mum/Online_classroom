@@ -192,159 +192,21 @@ hr {
     background-color: #4f545c;
     
     
-}
-
-
-
-
-/*
-.row p {
-    font-family: 'Source Sans Pro', sans-serif,cursive;
-    font-size: 20px;
-    color: white;
-    text-align: center;
     
 }
 
-H2 {
-    color : white;
 
+.submit_in_notice_stud {
+    border:3px solid white;
+    width: 300px;
+    height: 175px;
+    border-radius: 14px;
+    margin-right: 30px;
+    margin-left: auto;
 }
-*/
 
-
-
-
-
-/*
-<?php
-include('connect.php');
-session_start();
-
-    echo "<div class='row'>"; 
-    echo "<div class='col-10'>";
-    echo "</div>";
-        
-        echo "<div class='intro_box'>";
-            echo "<p>Hello ,".$_SESSION['username'];
-            echo "</p>";
-            echo "<a href='logout.php'><button>Logout</button></a>";
-        echo "</div>";
-    echo "</div>";
-        
-
-        
- $sqlq= "SELECT * from  {$_SESSION['username']}_joined" ;
-$sqldata = mysqli_query($dbcon,$sqlq) or die(mysqli_error($dbcon));        
-
-while($row=mysqli_fetch_array($sqldata,MYSQLI_ASSOC))
-{        
-    echo "<div class='class_info'>";
-    echo "<a href='#'><div class='class_color'>"; 
-            
-            echo "<p>IIS-sem 5</p>";
-            echo "<p>-Poornima</p>";
-            echo "</div></a>";
-        echo "<p>latest notification in the class</p>";
-        
-    echo "</div>";    
+.b {
+    width: 250px; 
+  overflow: hidden;
+  text-overflow: ellipsis
 }
-?>   */
-
-
-
-
-
-
-
-/*
---------------------------------------------------
-<!--
-<!--
-<!--
-<!--
-<?php
-include('connect.php');
-session_start();
-
-    echo "<div class='row'>"; 
-    echo "<div class='col-10'>";
-    echo "</div>";
-            echo "<p>Hello ,".$_SESSION['username'];
-            echo "</p>";
-            echo "<a href='logout.php'><button>Logout</button></a>";
-        echo "</div>";
-    echo "</div>";
-        
-        
-?>    
--->
--->
--->
--->
-<!--
-<div class="row">
-    <div class="class_info">
-        <div class="class_color"> 
-            
-            <p>IIS-sem 5</p>
-            <p>-Poornima</p>
-        </div>
-        <p>latest notification in the class</p>
-        
-    </div>
-        
-        
-        <div class="class_info">
-        <div class="class_color"> 
-            
-            <p>IIS-sem 5</p>
-            <p>-Poornima</p>
-        </div>
-        <p>latest notification in the class</p>
-        
-    </div>
-        <div class="class_info">
-        <div class="class_color"> 
-            
-            <p>IIS-sem 5</p>
-            <p>-Poornima</p>
-        </div>
-        <p>latest notification in the class</p>
-        
-    </div>
-        <div class="class_info">
-        <div class="class_color"> 
-            
-            <p>IIS-sem 5</p>
-            <p>-Poornima</p>
-        </div>
-        <p>latest notification in the class</p>
-        
-    </div>
-    <div class="class_info">
-        <div class="class_color"> 
-            
-            <p>IIS-sem 5</p>
-            <p>-Poornima</p>
-        </div>
-        <p>latest notification in the class</p>
-        
-    </div>
-    <div class="class_info">
-        <div class="class_color"> 
-            
-            <p>IIS-sem 5</p>
-            <p>-Poornima</p>
-        </div>
-        <p>latest notification in the class</p>
-        
-    </div>
-
-        
-</div>        
--->
-        
-*/
-        
-/*        echo "<div class='intro_box'>";*/

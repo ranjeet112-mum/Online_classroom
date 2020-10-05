@@ -2,7 +2,7 @@
 
     include('connect.php');
     session_start();
-
+//    echo "Here!!";
     $username=$_POST['username'];
     $_SESSION['username']=$_POST['username'];
     $gmail=$_POST['gmail'];
@@ -21,19 +21,9 @@
         $sqlq="INSERT INTO `registration` (`username`, `gmail`, `password`, `phone_no`) VALUES ('$username', '$gmail', '$password', '$phone_no')";
         if(mysqli_query($dbcon,$sqlq))
         {
-            
-            $sql1="CREATE TABLE `classroom`.`{$username}_created` ( `classcode` VARCHAR(20) NOT NULL , `classname` VARCHAR(20) NOT NULL ) ENGINE = InnoDB;";
-            $sql2="CREATE TABLE `classroom`.`{$username}_joined` ( `classcode` VARCHAR(20) NOT NULL,
-            `classname` VARCHAR(20) NOT NULL,
-            `creater` VARCHAR(20) NOT NULL) ENGINE = InnoDB;";
-            mysqli_query($dbcon,$sql1);
-                
-            mysqli_query($dbcon,$sql2);
-                
-
-        // redirect to home page of the user!!
-            clearstatcache();
-            header("location:college.php");
+        
+            echo "Registration successfull!!!";
+            header("Refresh:3; url=college.php", true ,30);
         
         
         }

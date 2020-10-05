@@ -1,4 +1,4 @@
 <?php
 
-$dbcon= mysqli_connect('localhost','root','','classroom');
+$dbcon= mysqli_connect('localhost','root','','modified_class');
 ?>

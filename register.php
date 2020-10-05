@@ -4,66 +4,34 @@
         <link rel="shortcut icon" href="discord.png">
         <link rel="stylesheet" href="_main_register.css">
     
-        <script>
-
-            function myFunction() {
-                var myVar;
-                myVar = setTimeout(showPage, 2000);
-            }
-
-            function showPage() {
-                document.getElementById("loader").style.display = "none";
-                document.getElementById("afterLoader").style.display = "block";
-            }
-        </script>
     </head>
-
-    <body onload= "myFunction()">
-
-        <!-- loader -->
-
-        <div id="loader"></div>
-
-        <div id="afterLoader" style="display: none;">
-
-            <!-- <H3><u><b>REGISTER</b></u></H3> -->
-
-            <div class="box">
-                <br>
-                <form action="registeration.php" method="post">
-
-                    <input type="text" name="username" class = "input" placeholder="username" required>
-                    <br>
-                    <br>
-
-                    <input type="email" name="gmail" class = "input" placeholder="email id" required>
-                    <br>
-                    <br>
-
-                    <input type="password" name="password" class = "input" placeholder="password" required>
-                    <br>
-                    <br>
-
-                    <input type="tel" name="phone_no" class="input" placeholder="contact" required>
-                    <br>
-                    <br>
-                    <input type="submit" value="Register" class="inputSubmit">
-                
-                </form>
-                
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </div>
-        <script>
-
-            function showPage() {
-                document.getElementById("loader").style.display = "none";
-                document.getElementById("afterLoader").style.display = "block";
-            }
-        </script>
+<body>
+    <H3><u><b>REGISTER</b></u></H3>
+    <div class="box">
+        <br>
+    <form action="registeration.php" method="post">
+<!--        <label>Username: </label>-->
+        <input type="text" name="username" style="font-size: 25px; background: #202225; color: #ffffff; cursor: pointer; width: 250px; height: 35px; border-radius: 8px;" placeholder="username" required>
+        <br>
+        <br>
+<!--        <label>gmail ID: </label>-->
+        <input type="email" name="gmail" style="font-size: 25px; background: #202225; color: #ffffff; cursor: pointer; width: 250px; height: 35px; border-radius: 8px;" placeholder="gmail id" required>
+        <br>
+        <br>
+<!--        <label>Password: </label>-->
+        <input type="password" name="password" style="font-size: 25px; background: #202225; color: #ffffff; cursor: pointer; width: 250px; height: 35px; border-radius: 8px;" placeholder="password" required>
+        <br>
+        <br>
+<!--        <label>Phone no.: </label>-->
+        <input type="tel" name="phone_no" style="font-size: 25px; background: #202225; color: #ffffff; cursor: pointer; width: 250px; height: 35px; border-radius: 8px;" placeholder="contact" required>
+        <br>
+        <br>
+        <input type="submit" value="Register" style="font-size: 25px; border-radius: 28px; padding: 12px 32px; color:black; background-color: #77eb34; color = #ffffff;">
+        
+    
+        
+        
+    </form>
+    </div>
     </body>
 </html>

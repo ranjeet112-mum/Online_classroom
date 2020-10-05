@@ -7,14 +7,14 @@ session_start();
 
 $user=$_SESSION['username'];
 $clscode = $_SESSION['class11'];
-$sqlq1= "DELETE FROM `{$_SESSION['class11']}_stud_details` WHERE username='$user'";
-$sqlq2 = "DELETE FROM `{$user}_joined` WHERE classcode='$clscode'";
+$sqlq1= "DELETE FROM `student_class_rec` WHERE username='$user' AND classcode='$clscode'";
+
+
+//$sqlq2 = "DELETE FROM `{$user}_joined` WHERE classcode='$clscode'";
 
     if(mysqli_query($dbcon,$sqlq1))
-        mysqli_query($dbcon,$sqlq2);
-    else{
-        echo "error unenrolling";
-    }
+        echo "successfully unenrolled";
+    
     header("Refresh:3; url=college.php", true ,30);
 
 ?>
