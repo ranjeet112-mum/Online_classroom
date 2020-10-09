@@ -1,31 +1,102 @@
 html {
-    background: linear-gradient(to right,#dcddde,#8e9297);
+    background: linear-gradient(to right, #dcddde, #8e9297);
     background-repeat: no-repeat;
     width: 100%;
-    height:100%;
-    
+    height: 100%;
 }
+
+
+/* pre loader */
+
+#loader {
+    position: relative;
+    left: 45%;
+    top: 200px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid rgb(7, 117, 243);
+    border-bottom: 16px solid rgb(52, 153, 83);
+    width: 40px;
+    height: 40px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* After loading div block */
+
+#afterLoader {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("classroomRegister.jpg");
+    background-repeat: no-repeat;
+    /* object-fit: fill; */
+    height: 100%;
+}
+
 .box {
     font-size: 25px;
     margin-left: 35%;
     margin-top: 5%;
     background-color: aliceblue;
     text-align: center;
-    
-    width:400px;
-    height:400px;
+    width: 400px;
+    height: 400px;
     padding: 25px;
     border: 2px solid black;
-    border-radius: 10px;
-    
-    box-shadow: 0 0 10px #4f545c;
+    border-radius: 50px;
+    box-shadow: 10px 5px 20px #326bc7;
     background-color: #b9bbbe;
-    
 }
+
 .box p {
     font-size: 20px;
-    font font-family: monospace;
+    font-family: monospace;
     font-style: bold;
+}
+
+/* Changed from inline css to external css */
+
+
+/* redundant
+u { 
+    text-decoration: underline wavy rgb(134, 114, 57);
+} */
+
+.input {
+    font-size: 25px;
+    background: #202225;
+    color: #ffffff;
+    cursor: pointer;
+    width: 350px;
+    height: 35px;
+    border-radius: 8px;
+}
+
+.inputSubmit {
+    font-size: 25px;
+    font-family: cursive;
+    border-radius: 10px;
+    padding: 12px 32px;
+    /* color: black; */
+    background-color: #77eb34;
+    color: #db5d5d;
 }
 
 H3 {
