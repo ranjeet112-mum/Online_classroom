@@ -2,14 +2,14 @@
 <html>
     <head>
             <title>WELCOME!!</title>
-        <link rel="shortcut icon" href="discord.png">
+        <link rel="shortcut icon" href="favicon-logo.jpg">
         <link rel="stylesheet" href="_main_college.css">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     </head>
     <body>
     <div class="top_box">
         <div class="row">
-            <div class="col-2" id="image"><img src="TCET-classroom.png">
+            <div class="col-2" id="image"><img src="TCET-classroom.jpg">
             </div>
             <div class="col-6"><p>TCET-classroom</p></div>
             <div class="col-4">
@@ -32,7 +32,7 @@ include('connect.php');
 session_start();
 
     echo "<div class='row'>"; 
-    echo "<div class='col-10'>";
+    echo "<div class='col-10'>"; // for blank space
     echo "</div>";
         
         echo "<div class='intro_box'>";

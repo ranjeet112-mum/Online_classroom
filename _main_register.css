@@ -14,8 +14,8 @@ html {
     top: 200px;
     border: 16px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 16px solid rgb(7, 117, 243);
-    border-bottom: 16px solid rgb(52, 153, 83);
+    border-top: 10px solid rgb(7, 117, 243);
+    border-bottom: 10px solid rgb(45, 114, 66);
     width: 40px;
     height: 40px;
     -webkit-animation: spin 1s linear infinite;
@@ -57,7 +57,7 @@ html {
     background-color: aliceblue;
     text-align: center;
     width: 400px;
-    height: 400px;
+    height: 500px;
     padding: 25px;
     border: 2px solid black;
     border-radius: 50px;
@@ -102,4 +102,9 @@ u {
 H3 {
     text-align: center;
     font-size: 28px;
+}
+
+.error {
+    color: rgb(25, 106, 199);
+    font-size: 12px;
 }

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head><title>Create class</title>
-        <link rel="shortcut icon" href="discord.png">
+        <link rel="shortcut icon" href="favicon-logo.jpg">
         <link rel="stylesheet" href="_main_register.css">
     
     </head>

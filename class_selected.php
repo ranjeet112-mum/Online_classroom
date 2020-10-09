@@ -2,14 +2,14 @@
 <html>
     <head>
             <title><?php echo $_GET['cname']?></title>
-        <link rel="shortcut icon" href="discord.png">
+        <link rel="shortcut icon" href="favicon-logo.jpg">
         <link rel="stylesheet" href="_main_college.css?v=<?php echo time(); ?>">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     </head>
     <body>
     <div class="top_box">
         <div class="row">
-            <div class="col-2" id="image"><img src="TCET-classroom.png">
+            <div class="col-2" id="image"><img src="TCET-classroom.jpg">
             </div>
             <div class="col-6"><p>TCET-classroom > <?php echo $_GET['cname']; echo "   ( by -".$_GET['creater'].")"?></p></div>
             <div class="col-4">
@@ -58,9 +58,9 @@ while($row=mysqli_fetch_assoc($mysqli_result))
         echo "<a href = 'notice.php?notice_num=$aaa' style='text-decoration:none;'>";
     
     echo "<div class='notification_table'>
-            <b><i><p style='font-size:20px; margin-left:25px; color:white'>";  
+            <b><i><p style='font-size:20px; margin-left:25px; color:orange'>";  
                 echo $row['username'];
-echo "</p></i></b><b><i><p style='font-size:15px; margin-left:25px; color:white'>";  
+echo "</p></i></b><b><i><p style='font-size:15px; margin-left:25px; color:black'>";  
                 echo $no;
                 echo "</p></i></b></div>";
     

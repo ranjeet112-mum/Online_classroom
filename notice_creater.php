@@ -3,14 +3,14 @@
     <head>
             <title><?php include('connect.php');
         session_start();echo $_SESSION['cname']?></title>
-        <link rel="shortcut icon" href="discord.png">
+        <link rel="shortcut icon" href="favicon-logo.jpg">
         <link rel="stylesheet" href="_main_college.css?v=<?php echo time(); ?>">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     </head>
     <body>
     <div class="top_box">
         <div class="row">
-            <div class="col-2" id="image"><img src="TCET-classroom.png">
+            <div class="col-2" id="image"><img src="TCET-classroom.jpg">
             </div>
             <div class="col-6" style="text-align:center;"><p>TCET-classroom > <?php  echo $_SESSION['cname'];?></p></div>
             <div class="col-4">

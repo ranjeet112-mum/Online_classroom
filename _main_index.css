@@ -1,9 +1,8 @@
 html {
-    background: linear-gradient(to right,#51769b,#884891);
+    background: linear-gradient(to right, #51769b, #884891);
     background-repeat: no-repeat;
     width: 100%;
-    height:100%;
-    
+    height: 100%;
 }
 
 header {
@@ -12,24 +11,22 @@ header {
 }
 
 .box {
-    font-size: 25px;
+    font-size: 20px;
     margin-left: 35%;
     margin-top: 5%;
     background-color: rgb(65, 121, 170);
     text-align: center;
-    
-    width:400px;
-    height:400px;
+    width: 400px;
+    height: 450px;
     padding: 25px;
-    border: 2px solid black;
+    border: 2px solid rgb(141, 39, 39);
     border-radius: 50px;
-    
     box-shadow: 0 0 10px #4f545c;
     background-color: #b9bbbe;
-    
 }
+
 .box p {
-    font-size: 25px;
+    font-size: 20px;
     font-family: monospace;
 }
 
@@ -38,28 +35,33 @@ H3 {
     font-size: 28px;
 }
 
+.general_input {
+    font-size: 25px;
+    background: #202225;
+    color: #ffffff;
+    cursor: pointer;
+    width: 250px;
+    height: 35px;
+    border-radius: 8px;
+}
 
+.input_submit {
+    font-size: inherit;
+    padding: 12px 32px;
+    border-radius: 28px;
+    background-color: #77eb34;
+    color: #ffffff;
+}
 
+.input_register {
+    font-size: 25px;
+    border-radius: 28px;
+    padding: 12px 32px;
+    color: white;
+    background-color: black
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.error {
+    color: rgb(25, 106, 199);
+    font-size: 12px;
+}
