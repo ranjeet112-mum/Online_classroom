@@ -12,7 +12,6 @@ $sqlq2 = "SELECT * from student_class_rec WHERE classcode='$code' AND username='
 //$row = mysqli_fetch_array($mysqli_result);
 
 
-
 $mysqli_result=  mysqli_query($dbcon,$sqlq);// or die mysqli_error($dbcon);
 $row = mysqli_fetch_array($mysqli_result, MYSQLI_ASSOC);
 //echo $row['cname'];
@@ -49,7 +48,6 @@ else{
     echo"<p>INVALID CLASS CODE</p>";
     
 }
-
 header("Refresh:3; url=college.php", true ,30);
 
 

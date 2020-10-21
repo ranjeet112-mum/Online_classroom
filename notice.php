@@ -23,11 +23,11 @@
         <hr>
     <div class="row" style="height:auto;">
             <div class="col-8">
-        <p style="color:white; font-size:16px; text-align:center;">Submit your files here and also you'll find the file sent by your teacher here itself!!</p> 
+        <p style="color:green; font-size:16px; text-align:center;">Submit your files here and also you'll find the file sent by your teacher here itself!!</p> 
 
 
-                <p style="color:white; font-size:20px"><b>Task/Notice :</b></p>
-                <p style="color:white; font-size:20px">
+                <p style="color:red; font-size:20px"><b><u>Task/Notice :</u></b></p>
+                <p style="color:black; font-size:20px">
 <?php
 
 include('connect.php');
@@ -46,7 +46,7 @@ include('connect.php');
                 </p>
             </div>
         
-            <div class="col-4" style="border-left:1px solid white; text-align:center;color:white; font-size:20px; height: 175px;border:3px solid white;border-radius: 14px;overflow: hidden;
+            <div class="col-4" style="text-align:center;color:black; font-size:20px; height: 175px;border:3px solid white;border-radius: 14px;overflow: hidden;
   text-overflow: ellipsis;">
                 <p>Attach Your files here!!</p>
 <!--                    <div class="submit_in_notice_stud">-->
@@ -65,7 +65,7 @@ include('connect.php');
         
 <!--        TO DISPLAY ALL THE ATTACHMENTS GIVEN BY THE TEACHER!!-->
         
-        <p style="color:white; text-align:center; font-size:20px">Teachers attachments:</p>       
+        <p style="color:blue; text-align:center; font-size:20px">Teachers attachments:</p>       
 <?php        
         $creater= $_SESSION['creater'];
         $noti= $_SESSION['notice_num'];
@@ -83,7 +83,7 @@ include('connect.php');
         
 ?>        
      <hr>
-    <p style="color:white; text-align:center; font-size:20px">My Submissions:</p>
+    <p style="color:black; text-align:center; font-size:20px">My Submissions:</p>
         
   <?php        
         $creater= $_SESSION['username'];

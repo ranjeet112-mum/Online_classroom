@@ -25,11 +25,11 @@
 <!-- ---------------------------------------------------------------------------------------------       -->
  <div class="row" style="height:auto;">
             <div class="col-8">
-        <p style="color:white; font-size:16px; text-align:center;">All the submissions by the attendees will be seen here</p> 
+        <p style="color:green; font-size:20px; text-align:center;">All the submissions by the attendees will be seen here</p> 
 
 
-                <p style="color:white; font-size:20px"><b>Task/Notice :</b></p>
-                <p style="color:white; font-size:20px">
+                <p style="color:red; font-size:20px"><b><u>Task/Notice :</u></b></p>
+                <p style="color:black; font-size:20px">
 <?php
 
 include('connect.php');
@@ -48,7 +48,7 @@ include('connect.php');
                 </p>
             </div>
         
-            <div class="col-4" style="border-left:1px solid white; text-align:center;color:white; font-size:20px; height: 175px;border:3px solid white;border-radius: 14px;overflow: hidden;
+            <div class="col-4" style="text-align:center;color:black; font-size:20px; height: 175px;border:3px solid grey;border-radius: 14px;overflow: hidden;
   text-overflow: ellipsis;">
                 <p>Attach Your files here!!</p>
 <!--                    <div class="submit_in_notice_stud">-->
@@ -66,7 +66,7 @@ include('connect.php');
 
         
 <!--        TO DISPLAY ALL THE DONE BY STUDENTS!!-->
-        <p style="color:white; text-align:center; font-size:20px">Files attached:</p>
+        <p style="color:blue; text-align:center; font-size:20px">Files attached:</p>
         
 <?php        
          $creater= $_SESSION['creater'];
@@ -78,7 +78,7 @@ include('connect.php');
         
         echo "<ol>";
         while($row = mysqli_fetch_assoc($mysqli_res)) {
-            echo"<li style='color:white;  font-size:20px;  text-decoration: none;'>
+            echo"<li style='color:black;  font-size:20px;  text-decoration: none;'>
             <a href='view.php?id=".$row['id']."'>".$row['name']."</a></li>";
             
         }
@@ -86,7 +86,7 @@ include('connect.php');
         
 ?>   
     <hr>
-        <p style="color:white; text-align:center; font-size:20px">All Submissions:</p>
+        <p style="color: black; text-align:center; font-size:20px">All Submissions:</p>
 <?php        
          $creater= $_SESSION['creater'];
         $noti= $_SESSION['notice_num'];
@@ -98,7 +98,7 @@ include('connect.php');
         echo "<ol>";
         $q="&nbsp;&nbsp;&nbsp;&nbsp;";
         while($row = mysqli_fetch_assoc($mysqli_res)) {
-            echo"<li style='color:white;  font-size:20px;  text-decoration-color: none;'> 
+            echo"<li style='color:black;  font-size:20px;  text-decoration-color: none;'> 
             <a href='view.php?id=".$row['id']."'><div class='b'>".$row['name']."</div></a> ".$q."".$q."".$q."".$q."  by -".$row['username']."</li><br>";
             
             

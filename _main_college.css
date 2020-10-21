@@ -185,7 +185,7 @@ hr {
 }
 
 .comment_box {
-    border: 3px solid grey;
+    border: 3px solid rgb(182, 140, 140);
     box-shadow: 0 0 5px black;
     width:65%;
     height: 25px;
@@ -193,10 +193,8 @@ hr {
     margin-left: 17%;
     margin-top: 25px;
     text-align: center;
-    background-color: #4f545c;
-    
-    
-    
+    background-color: #dbdfdd;
+    color: orangered;
 }
 
 
