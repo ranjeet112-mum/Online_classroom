@@ -4,7 +4,10 @@ session_start();
 
 $code = $_POST['classcode'];
 $username = $_SESSION['username'];
-
+if($code == ""){
+    echo "invalid class code entered";
+}
+else{
 $sqlq = "SELECT * from list_of_class WHERE code='$code'";
 
 $sqlq2 = "SELECT * from student_class_rec WHERE classcode='$code' AND username='$username'";
@@ -47,6 +50,7 @@ else if($row['creater'] == $username)
 else{
     echo"<p>INVALID CLASS CODE</p>";
     
+}
 }
 header("Refresh:3; url=college.php", true ,30);
 
